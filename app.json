@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Sparsh",
+    "slug": "sparsh",
+    "scheme": "sparsh",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon-1024.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pratik.sparsh"
+    },
+    "android": {
+      "softwareKeyboardLayoutMode": "resize",
+      "adaptiveIcon": {
+        "backgroundColor": "#2A0D14",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      },
+      "package": "com.pratik_10122006.sparsh"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e1ab536b-57a2-457a-afaf-3e14e5bc1247"
+      }
+    },
+    "plugins": [
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Allow Sparsh to record voice messages."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "defaultChannel": "messages"
+        }
+      ],
+      "expo-secure-store",
+      "expo-font",
+      "expo-asset"
+    ]
+  }
+}

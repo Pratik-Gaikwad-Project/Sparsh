@@ -1,0 +1,11 @@
+-- Lovenest Chat PIN security notes
+-- No SQL migration is required for a device-local PIN.
+-- The PIN verifier is stored in Expo SecureStore on the device, not in public.profiles.
+--
+-- IMPORTANT: ensure your existing RLS policies on public.messages only allow a user
+-- to select/update rows where auth.uid() = sender_id OR auth.uid() = receiver_id,
+-- and only allow inserts where sender_id = auth.uid().
+-- Do not apply duplicate policies without inspecting current policies first.
+--
+-- Private storage bucket chat-photos should have policies that restrict objects
+-- to the two participants in the relevant conversation. Do not make the bucket public.
